@@ -146,3 +146,71 @@ if (usuarioValido) {
 } else {
     alert("Acesso negado");
 }
+
+// ### **Nível Avançado 	** 
+
+//  1. **Classificação de triângulos:** 
+
+const a = Number(prompt("Digite o primeiro número:"));
+const b = Number(prompt("Digite o segundo número:"));
+const c = Number(prompt("Digite o terceiro número:"));
+
+// Verifica se os lados formam um triângulo válido
+if (a + b > c && a + c > b && b + c > a) {
+    if (a === b && b === c) {
+        alert("É um triângulo equilátero");
+    } else if (a === b || b === c || a === c) {
+        alert("É um triângulo isósceles");
+    } else {
+        alert("É um triângulo escaleno");
+    }
+} else {
+    alert("Os valores não formam um triângulo");
+}
+
+
+//  2. **Conversão de notas para conceitos:** 
+
+const notas = Number(prompt("Digite uma nota"));
+
+if (notas >= 90 && nota <= 100) {
+    alert ("Nota A");
+} else if (notas >= 80){
+    alert ("Nota B");
+} else if (notas >= 70) {
+    alert ("Nota C");
+} else if (notas >= 60){
+    alert ("Nota D"); 
+} else if (notas < 60 && nota >=0) {
+    alert ("Nota f"); 
+} else {
+    alert ("nota inválida");
+}
+
+
+//  3. **Cálculo de IMC::** 
+
+const peso = Number(prompt("Informe o seu peso (kg)"));
+const altura = Number(prompt("Informe sua altura (m)"));
+const imc = peso / (altura ** 2);
+
+if (imc < 18.5) {
+    alert("Magreza");
+} else if (imc <= 24.9) {
+    alert("Peso Normal");
+} else if (imc <= 29.9) {
+    alert("Sobrepeso");
+} else if (imc <= 39.9) {
+    alert("Obesidade Grau I");
+} else {
+    alert("Obesidade Grau III");
+}
+
+//  4. **Validação de ano bissexto** 
+const ano = Number(prompt("Digite um ano para verificar se é bissexto:"));
+
+if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+    alert(`${ano} é um ano bissexto.`);
+} else {
+    alert(`${ano} não é um ano bissexto.`);
+}
